@@ -1,0 +1,19 @@
+%h2 Create New League
+- form_for @league do |form|  
+  %fieldset
+    %legend League Info
+    %ol
+      %li
+        = form.label "League Name"
+        = form.text_field :name
+      -# %li
+        -# = form.label "Start date"
+        -# = form.text_field :start_date
+  -# %fieldset
+    -# %legend League Users
+    -# %p
+      -# = form.label "Users Email *Max of 10 users per league*"
+    -# %ol#teams
+      -# = render 'teams', :f => form
+  
+  = form.submit 'Create'

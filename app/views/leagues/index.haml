@@ -1,0 +1,5 @@
+%h2 My Leagues
+-unless @leagues.blank?
+  List or Table of all users leagues, separated by status:
+-else
+  = link_to 'Create A New League', new_league_path, :id => 'new', :class => "button"

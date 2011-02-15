@@ -1,0 +1,239 @@
+@font-face {
+    font-family: "ITC Avant Garde Gothic Std";
+    src: url("/stylesheets/fonts/ITCAvantGardeStd-Bold.otf");
+}
+    
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #1C1C1C url(/images/common/bg-grain.png) repeat;
+    font: 13px "Lucida Grande", "Lucida Sans Unicode", "Arial", sans-serif;
+    color: #FFF;
+}
+
+th {
+   text-transform: capitalize;
+}
+
+#header {
+    background: #3a1468 url(/images/common/header-bg.png) repeat-x;
+    height: 206px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+
+    #header .wrapper {
+        margin: 0 auto;
+        width: 940px;
+    }
+    
+    #header .header-wrapper {
+        overflow: hidden;
+        height: 116px;
+    }
+    
+    #header h1 {
+        clear: both;
+        font-family: "ITC Avant Garde Gothic Std", helvetica, sans-serif;
+        font-size: 60px;
+        letter-spacing: -3px;
+        text-transform: uppercase;
+        text-shadow: 0 2px 2px #000;
+        height: 66px;
+        overflow: hidden;
+        margin-top: 25px;
+    }
+    
+    #header h1 span {
+        color: #06ffaa;
+    }
+    
+    #header h1 span.subtitle {
+        font: 26px "Lucida Grande", "Lucida Sans Unicode", "Arial", sans-serif;
+        letter-spacing: -1px;
+        text-transform: capitalize;
+    }
+    
+    #header a.logo {
+        background: url(/images/common/header-logo.png) no-repeat;
+        display: block;
+        float: left;
+        height: 101px;
+        overflow: hidden;
+        outline: none;
+        margin: 8px 44px 0 0;
+        text-indent: -9999px;
+        width: 118px;
+    }
+    
+        #header a.logo:hover {
+            background-position: 0 -101px;
+        }
+    
+    #header .user-area {
+        float: right;
+        font-size: 10px;
+        text-align: right;
+        margin-top: -50px;
+        width: 140px;
+    }
+    
+        #header .user-area ul {
+            width: 80px;
+            float: left;
+        }
+        
+            #header .user-area ul li {
+                list-style: none;
+            }
+            
+            #header .user-area ul li.username {
+                border-bottom: 1px solid #5a1f9e;
+                font-size: 12px;
+                font-weight: bold;
+                height: 13px;
+                overflow: hidden;
+                padding-bottom: 4px;
+                margin-bottom: 4px;
+            }
+            
+            #header .user-area ul li a {
+                color: #FFF;
+                font-size: 11px;
+                text-shadow: 0 1px 0 #130722;
+                text-decoration: none;
+            }
+            
+            #header .user-area ul li a:hover {
+                text-decoration: underline;
+            }
+            
+            #header .user-area .signup {
+                background: url(/images/common/button-signup-header.png) no-repeat;
+                display: block;
+                float: right;
+                height: 34px;
+                margin-bottom: 2px;
+                overflow: hidden;
+                outline: none;
+                text-indent: 9999px;
+                width: 80px;
+            }
+                #header .user-area .signup:hover {
+                    background-position: 0 -34px;
+                }
+                #header .user-area .signup:active {
+                    background-position: 0 -68px;
+                }
+                
+            #header .user-area span.signin {
+                color: #8d30ff;
+                clear: right;
+                float: right;
+                display: block;
+                font-size: 12px;
+            }
+            
+                #header .user-area span.signin a.signin {
+                    color: #FFF;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+                
+                #header .user-area span.signin a.signin:hover {
+                    text-decoration: underline;
+                }
+    
+        #header .user-area .gravatar {
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            -webkit-box-shadow: 0 1px 2px #000;
+            -moz-box-shadow: 0 1px 2px #000;
+            box-shadow: 0 1px 2px #000;
+        }
+    
+    #header form input {
+        border: 1px solid #210b3b;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-box-shadow: 0 1px 0px #5f3597;
+        -moz-box-shadow: 0 1px 0px #5f3597;
+        box-shadow: 0 1px 0px #5F3597;
+        background: #361261 url(/images/common/search-bg.png) 0 0 no-repeat;
+        color: #822ce8;
+        font-family: "Lucida Grande", "Lucida Sans Unicode", "Arial", sans-serif;
+        font-size: 26px;
+        height: 39px;
+        line-height: 35px;
+        outline: none;
+        letter-spacing: -2px;
+        padding: 3px 0 6px 45px;
+        margin-top: 32px;
+        text-shadow: 0 1px 1px #210b3b;
+        resize:none;
+        width: 566px;
+    }
+    
+        #header form input:focus {
+            background-position: 0 -50px;
+            color: #FFF;
+        }
+    
+        #header form .placeholder {
+            color: #521c92;
+            font-family: "Lucida Grande", "Lucida Sans Unicode", "Arial", sans-serif;
+            font-size: 26px;
+            top: 40px !important;
+            text-shadow: 0 1px 1px #210b3b;
+            left: 50px !important;
+            letter-spacing: -2px;
+        }
+        
+        #header form .form-prompt-wrapper {
+            padding-bottom: 1px;
+        }
+
+#content {
+    margin: 0 auto;
+    width: 940px;
+}
+
+#footer {
+    clear: both;
+}
+
+    #footer .footer-wrapper {
+        background: url(/images/common/bg-footer.png) repeat-x;
+        padding-top: 15px;
+        margin: 0 auto 50px auto;
+        width: 940px;
+    }
+    
+    #footer img {
+        float: left;
+        margin-right: 20px;
+    }
+    
+    #footer p {
+        color: #474747;
+        font-size: 11px;
+        line-height: 15px;
+        margin-top: 6px;
+        width: 780px;
+    }
+    
+    #footer p strong {
+        color: #5D5D5D;
+        font-weight: normal;
+    }
+    
+    #footer p a {
+        color: #666;
+        text-decoration: none;
+    }
+
