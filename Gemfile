@@ -15,8 +15,9 @@ gem "ruby_parser"
 # => Seed_fu
 gem 'seed-fu'
 
-# => Fanfeedr
-gem 'fanfeedr'
+# => For Screen Scraping
+gem 'nokogiri'
+# gem 'open-uri'
 
 # => Testing - Rspec/Cucumber
 group :development, :test do 
