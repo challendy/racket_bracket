@@ -1,4 +1,6 @@
 class TournamentsController < ApplicationController
+  layout 'dashboard'
+
   # GET /tournaments
   # GET /tournaments.xml
   def index
@@ -35,6 +37,7 @@ class TournamentsController < ApplicationController
   # GET /tournaments/1/edit
   def edit
     @tournament = Tournament.find(params[:id])
+    # raise @tournament.matches.inspect
   end
 
   # POST /tournaments

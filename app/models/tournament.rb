@@ -2,6 +2,8 @@ class Tournament < ActiveRecord::Base
   has_many :matches
   has_and_belongs_to_many :players
 
+  accepts_nested_attributes_for :matches  
+
   after_create :process_matches
 
   def process_matches

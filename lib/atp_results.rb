@@ -1,5 +1,5 @@
-require 'rubygems'
 require 'open-uri'
+require 'pp'
 
 
 class AtpResults
@@ -69,7 +69,7 @@ class AtpResults
       current_tourney["matches"] = matches
       daily_results << current_tourney
     end
-    daily_results
+    pp daily_results
   end
   
   def create_logs
