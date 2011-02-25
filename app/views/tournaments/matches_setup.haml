@@ -1,11 +1,16 @@
-- @tournament.matches.each do |match|
-  =form_for match do |f|
-    Posisiton
-    =f.position
+= semantic_form_for @tournament do |form|
+  = form.inputs :name, :location, :level
 
-    player 1
-    =f.select("player", "player_id", Player.all.collect {|p| [ p.full_name, p.id ] }, {:prompt => 'Select Player'})
+  %table
+    = form.semantic_fields_for :matches do |match|
+      %tr
+        %td
+          Position
+          =match.object.position
+        %td
+          =match.collection_select :player_1, Player.all, :id, :full_name, {:include_blank => true, :prompt=>"Select Player 1"}
+          =match.collection_select :player_2, Player.all, :id, :full_name, {:include_blank => true, :prompt=>"Select Player 2"}
     
-    Player 2
-    .actions
-      = f.submit 'Save'
+    = form.submit
+  
+

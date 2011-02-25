@@ -7,6 +7,7 @@ gem 'mysql'
 # => Haml - Compass/Stylesheets
 gem "haml"
 gem "haml-rails", "0.3.4", :group => :development
+gem 'formtastic', '~> 1.1.0'
 
 # => Devise
 gem "devise", :git => "git://github.com/plataformatec/devise.git"
