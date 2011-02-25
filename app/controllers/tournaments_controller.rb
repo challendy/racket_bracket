@@ -1,8 +1,7 @@
 class TournamentsController < ApplicationController
   layout 'dashboard'
 
-  # GET /tournaments
-  # GET /tournaments.xml
+
   def index
     @tournaments = Tournament.all
 
@@ -12,8 +11,7 @@ class TournamentsController < ApplicationController
     end
   end
 
-  # GET /tournaments/1
-  # GET /tournaments/1.xml
+
   def show
     @tournament = Tournament.find(params[:id])
 
@@ -23,8 +21,7 @@ class TournamentsController < ApplicationController
     end
   end
 
-  # GET /tournaments/new
-  # GET /tournaments/new.xml
+
   def new
     @tournament = Tournament.new
 
@@ -34,14 +31,13 @@ class TournamentsController < ApplicationController
     end
   end
 
-  # GET /tournaments/1/edit
+
   def edit
     @tournament = Tournament.find(params[:id])
     # raise @tournament.matches.inspect
   end
 
-  # POST /tournaments
-  # POST /tournaments.xml
+
   def create
     @tournament = Tournament.new(params[:tournament])
 
@@ -56,8 +52,7 @@ class TournamentsController < ApplicationController
     end
   end
 
-  # PUT /tournaments/1
-  # PUT /tournaments/1.xml
+
   def update
     @tournament = Tournament.find(params[:id])
 
@@ -72,8 +67,7 @@ class TournamentsController < ApplicationController
     end
   end
 
-  # DELETE /tournaments/1
-  # DELETE /tournaments/1.xml
+
   def destroy
     @tournament = Tournament.find(params[:id])
     @tournament.destroy
@@ -83,4 +77,10 @@ class TournamentsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def matches_setup
+    @tournament = Tournament.find(params[:tournament_id])
+  end
+
+
 end

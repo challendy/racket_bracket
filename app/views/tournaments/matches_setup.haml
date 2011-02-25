@@ -1,0 +1,11 @@
+- @tournament.matches.each do |match|
+  =form_for match do |f|
+    Posisiton
+    =f.position
+
+    player 1
+    =f.select("player", "player_id", Player.all.collect {|p| [ p.full_name, p.id ] }, {:prompt => 'Select Player'})
+    
+    Player 2
+    .actions
+      = f.submit 'Save'
