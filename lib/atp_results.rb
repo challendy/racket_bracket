@@ -6,16 +6,12 @@ class AtpResults
 
   def initialize
     # create_logs
-  end
-
-  def run
     import
-    # print_log_footer
   end
   
   def import
     #Make dynamic for past dates ?date=20110209
-    doc = Nokogiri::HTML(open("http://sports.espn.go.com/sports/tennis/dailyResults"))
+    doc = Nokogiri::HTML(open("http://sports.espn.go.com/sports/tennis/dailyResults?date=20110317"))
 
 
     daily_results = []
