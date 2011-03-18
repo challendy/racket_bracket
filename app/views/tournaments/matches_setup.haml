@@ -1,16 +1,29 @@
 = semantic_form_for @tournament do |form|
   = form.inputs :name, :location, :level
+  #bracket_base
+    #bracket_body
 
-  %table
-    = form.semantic_fields_for :matches do |match|
-      %tr
-        %td
-          Position
-          =match.object.position
-        %td
-          =match.collection_select :player_1, Player.all, :id, :full_name, {:include_blank => true, :prompt=>"Select Player 1"}
-          =match.collection_select :player_2, Player.all, :id, :full_name, {:include_blank => true, :prompt=>"Select Player 2"}
+      .round#r1
+        .header First Round
+        = form.semantic_fields_for :first_round_matches do |match|
+          %div
+            =match.collection_select :player_1, Player.all, :id, :full_name, {:include_blank => true, :prompt=>"Select Player 1"}
+        
+          .odd
+            =match.collection_select :player_2, Player.all, :id, :full_name, {:include_blank => true, :prompt=>"Select Player 2"}
+
+      .round#r2
+        .header Second Round
+        = form.semantic_fields_for :second_round_matches do |match|
+          
+          %div
+            %span
+              =match.collection_select :player_1, Player.all, :id, :full_name, {:include_blank => true, :prompt=>"Select Player 1"}
+        
+          .odd
+            =match.collection_select :player_2, Player.all, :id, :full_name, {:include_blank => true, :prompt=>"Select Player 2"}
     
-    = form.submit
+
+      = form.submit
   
 

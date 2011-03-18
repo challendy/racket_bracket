@@ -2,7 +2,10 @@ class Tournament < ActiveRecord::Base
   has_many :matches
   has_and_belongs_to_many :players
 
-  accepts_nested_attributes_for :matches  
+  has_many :first_round_matches, :class_name => "Match", :conditions => ['position <= ?', 16]
+  has_many :second_round_matches, :class_name => "Match", :conditions => ['position > ?', 16]
+  
+  accepts_nested_attributes_for :matches, :first_round_matches, :second_round_matches
 
   after_create :process_matches
 

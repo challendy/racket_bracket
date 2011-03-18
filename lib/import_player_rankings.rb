@@ -29,9 +29,10 @@ class ImportPlayerRankings
       j_points = points.gsub(",", "")
       position_moved = a[5].gsub(" ", "")
       tournaments_played = a[6].gsub(" ", "")
+      
+      fullname = name_array[1] + name_array[0]
 
-
-      existing_player = Player.find_by_last_name(name_array[1])
+      existing_player = Player.where("first_name = ? AND last_name = ?", name_array[1], name_array[0]).first
       unless existing_player.blank?
         existing_player.update_attributes(:atp_rank => rank, 
                                           :points => j_points,
@@ -41,7 +42,7 @@ class ImportPlayerRankings
         puts "Updating: #{existing_player.last_name}"
       else
         p = Player.create(:atp_rank => rank, 
-                      :first_name => name_array[1], 
+                      :first_name => name_array[1],
                       :last_name => name_array[0],                     
                       :points => j_points,
                       :position_moved => position_moved, 
